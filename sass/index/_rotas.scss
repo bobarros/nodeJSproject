@@ -1,0 +1,204 @@
+.rotas {
+
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+
+  &__cards {
+    margin: 3rem 5rem 0 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 6rem 1rem 0 1rem;
+    }
+  }
+
+  &__titulo {
+
+    width: 100%;
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    color: $color-terca;
+    text-align: center;
+    font-family: $font-primary;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+      margin: 0 auto;
+      line-height: 4rem;
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+  &__sub-titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    font-family: $font-secondary  ;
+  }
+
+  &__card {
+
+    width: 20rem;
+    position: relative;
+    margin: .75rem;
+    transition: all .2s;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: .25rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin: .5rem .25rem;
+    }
+
+    &--link,
+    &--link:visited,
+    &--link:link {
+      color: transparent;
+      text-decoration: none;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 20rem;
+      z-index: 3;
+      border-radius: 1rem;
+      transition: all .2s;
+    }    
+
+    @media only screen and (min-width: $bp-medium) {
+      &--link:hover {
+        background-color: $color-secondary;
+        opacity: .3;
+      }
+}
+
+    &--img {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    &--svg {
+
+      display: flex;
+      
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    &--tag {
+      display: flex;
+      align-items: center;
+      border: 1px solid $color-secondary ;
+      padding: 0 .5rem;
+      width: 60%;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background-color: #fff;
+      border-radius: .5rem;
+      z-index: 4;
+    }
+
+    &--dificuldade {
+      margin-left: .5rem;
+      font-size: 1rem; 
+      font-weight: 700;
+      color: $color-secondary
+      
+    }
+
+    &--descricao {
+      background-color: #fff;
+      position: absolute;
+      bottom: 5.25rem;
+      left: 0;
+      width: 50%;
+      height: 4rem;
+      border-radius: 0 1rem 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--nome {
+      font-weight: 700;
+    }
+
+    &--preco {
+      font-weight: 700;
+      color: red;
+    }
+
+    &--preco-taxado {
+      text-decoration: line-through;
+    }
+
+    &--desconto {
+      font-weight: 700;
+      color: red;
+      position: absolute;
+      left: 3.5rem;
+      bottom: 0.4rem;
+    }
+
+    &--detalhes {
+      text-align: center;
+      margin-top: .5rem;
+      margin-bottom: 1.25rem;
+    }
+
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    &__card:hover {
+      transform: scale(.95);
+    }
+  }  
+
+} 
+
+.btn-vermais {
+    color: $color-terca;
+    background-color: transparent;
+    border-bottom: 1px solid #441F00;
+    width: 12rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 3px;
+    margin: 0 auto;
+    transition: all .2s;
+}
+
+.btn-vermais:visited,
+.btn-vermais:link,
+.btn-vermais {
+    justify-self: center;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: $bp-medium) {
+  .btn-vermais:hover {
+    background-color: $color-terca;
+    color: #fff;
+  }
+
+  .btn-vermais:active {
+    transform: translateY(2px);
+    background-color: transparent;
+    border-bottom: 1px solid #441F00;
+  }
+}  
+

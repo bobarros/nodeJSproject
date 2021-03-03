@@ -1,0 +1,196 @@
+@font-face {
+        font-display: swap;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Lato Light'), local('Lato-Light'), url('/fonts/Lato-Light.ttf') format('truetype');
+      }
+
+      
+      @font-face {
+        font-display: swap;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Lato Regular'), local('Lato-Regular'), url('/fonts/Lato-Regular.ttf') format('truetype');
+      }
+     
+      @font-face {
+        font-display: swap;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Lato Bold'), local('Lato-Bold'), url('/fonts/Lato-Bold.ttf') format('truetype');
+      }      
+   
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Roboto Light'), local('Roboto-Light'), url('/fonts/Roboto-Light.ttf') format('truetype');
+      }
+      
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'), url('/fonts/Roboto-Regular.ttf') format('truetype');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Roboto Medium'), local('Roboto-Medium'), url('/fonts/Roboto-Medium.ttf') format('truetype');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Roboto Medium'), local('Roboto-Bold'), url('/fonts/Roboto-Bold.ttf') format('truetype');
+      }      
+   
+// Cores
+$color-primary:#1E5110;
+$color-primary-light-1: lighten($color-primary, 10% );
+$color-primary-light-2: lighten($color-primary, 20% );
+$color-primary-light-3: lighten($color-primary, 30% );
+$color-primary-dark-1: darken($color-primary, 10% );
+$color-primary-dark-2: darken($color-primary, 20% );
+$color-primary-dark-3: darken($color-primary, 30% );
+
+$color-secondary:#295293;
+$color-secondary-light-1: lighten($color-secondary, 10% );
+$color-secondary-light-2: lighten($color-secondary, 20% );
+$color-secondary-light-3: lighten($color-secondary, 33% );
+$color-secondary-dark-1: darken($color-secondary, 10% );
+$color-secondary-dark-2: darken($color-secondary, 20% );
+$color-secondary-dark-3: darken($color-secondary, 30% );
+
+$color-terca:#441F00; 
+$color-terca-light-1: lighten($color-terca, 10% );
+$color-terca-light-2: lighten($color-terca, 20% );
+$color-terca-light-3: lighten($color-terca, 33% );
+$color-terca-dark-1: darken($color-terca, 10% );
+$color-terca-dark-2: darken($color-terca, 20% );
+$color-terca-dark-3: darken($color-terca, 30% );
+
+$color-quarta:#251605;
+$color-quarta-light-1: lighten($color-quarta, 10% );
+$color-quarta-light-2: lighten($color-quarta, 20% );
+$color-quarta-light-3: lighten($color-quarta, 33% );
+$color-quarta-dark-1: darken($color-quarta, 10% );
+$color-quarta-dark-2: darken($color-quarta, 20% );
+$color-quarta-dark-3: darken($color-quarta, 30% );
+
+// Fontes
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+
+
+amp-story {
+        font-family: $font-primary;
+        color: #fff;
+      }
+
+amp-story-page {
+        background-color: #000;
+      }
+
+h1 {
+        font-weight: bold;
+        font-size: 2.875rem;
+        font-weight: 500;
+        line-height: 3rem;
+}
+
+p {
+        font-weight: normal;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        color: #fff;
+}
+
+q {
+        font-weight: 300;
+        font-size: 1.1rem;
+}
+amp-story-grid-layer.bottom {
+        align-content:end;
+}
+      
+amp-story-grid-layer.noedge {
+        padding: 0;
+}
+
+amp-story-grid-layer.center-text {
+        align-content: center;
+}
+
+.wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+}
+
+.banner-text {
+        text-align: center;
+        background-color: $color-terca;
+        line-height: 1.65rem;
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+}
+
+.fundo-padrao {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+.fundo-verde {
+        background-color: $color-primary;
+        opacity: .35;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+.slide_x {
+        animation-name: slide_x;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes fade {
+              0% {
+                transform: translateX(0);                     
+
+              } 
+                     
+              100% {
+                transform: translateX(150px);  
+              }
+}
+
+.botao, .botao:visited, .botao:active {
+        border-radius: 50%;
+        font-size: 1rem;
+        padding: 0;
+        text-align: center;
+        background-color: $color-secondary;        
+        height: 5rem;
+        width: 5rem;
+        margin: auto;
+        line-height: 5rem;
+        text-decoration: none;
+        color: #fff;
+
+}

@@ -1,0 +1,55 @@
+{
+  "name": "jujutour",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.15.1",
+    "npm": "7.6.0"
+  },
+  "description": "Node JS public code for my github profile",
+  "main": "app.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node app.js",
+    "startlocal": "npm-run-all --parallel devserver watch:index watch:rotas watch:administrativo watch:stories",
+    "devserver": "nodemon --watch app.js --watch views --watch routes --ext ejs,js",
+    "watch:index": "node-sass sass/index/main.scss views/partials/styles/style-index.ejs -w",
+    "compile-index:sass": "node-sass sass/index/main.scss sass/build/style-index.comp.css",
+    "prefix-index:css": "postcss --use autoprefixer -b 'last 10 versions' sass/build/style-index.comp.css -o sass/build/style-index.prefix.css",
+    "compress-index:css": "node-sass sass/build/style-index.prefix.css views/partials/styles/style-index.ejs --output-style compressed",
+    "build-index:css": "npm-run-all compile-index:sass prefix-index:css compress-index:css",
+    "watch:rotas": "node-sass sass/rotas/main.scss views/partials/styles/style-rotas.ejs -w",
+    "compile-rotas:sass": "node-sass sass/rotas/main.scss sass/build/style-rotas.comp.css",
+    "prefix-rotas:css": "postcss --use autoprefixer -b 'last 10 versions' sass/build/style-rotas.comp.css -o sass/build/style-rotas.prefix.css",
+    "compress-rotas:css": "node-sass sass/build/style-rotas.prefix.css views/partials/styles/style-rotas.ejs --output-style compressed",
+    "build-rotas:css": "npm-run-all compile-rotas:sass prefix-rotas:css compress-rotas:css",
+    "watch:administrativo": "node-sass sass/administrativo/main.scss views/partials/styles/style-administrativo.ejs -w",
+    "compile-administrativo:sass": "node-sass sass/administrativo/main.scss sass/build/style-administrativo.comp.css",
+    "prefix-administrativo:css": "postcss --use autoprefixer -b 'last 10 versions' sass/build/style-administrativo.comp.css -o sass/build/style-administrativo.prefix.css",
+    "compress-administrativo:css": "node-sass sass/build/style-administrativo.prefix.css views/partials/styles/style-administrativo.ejs --output-style compressed",
+    "build-administrativo:css": "npm-run-all compile-administrativo:sass prefix-administrativo:css compress-administrativo:css",
+    "watch:stories": "node-sass sass/stories/layout.scss views/partials/styles/style-stories.ejs -w",
+    "compile-stories:sass": "node-sass sass/stories/layout.scss sass/build/style-stories.comp.css",
+    "prefix-stories:css": "postcss --use autoprefixer -b 'last 10 versions' sass/build/style-stories.comp.css -o sass/build/style-stories.prefix.css",
+    "compress-stories:css": "node-sass sass/build/style-stories.prefix.css views/partials/styles/style-stories.ejs --output-style compressed",
+    "build-stories:css": "npm-run-all compile-stories:sass prefix-stories:css compress-stories:css",
+    "delete-build": "rm -rf sass/build",
+    "build-all:css": "npm-run-all build-index:css build-rotas:css build-administrativo:css build-stories:css delete-build"
+  },
+  "author": "Bruno Barros",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "devserver": "^0.2.5",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}

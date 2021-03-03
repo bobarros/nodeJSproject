@@ -1,0 +1,22 @@
+{
+  "bookendVersion": "v1.0",
+  
+  "components": [
+    {
+      "type": "heading",
+      "text": "Saiba Mais"
+    },
+    {
+      "type": "small",
+      "title": "Conheça yourpage",
+      "url": "/",
+      "image": "/apple-icon-precomposed.png"
+    },
+    {
+      "type": "small",
+      "title": "Rota da aventura 01",
+      "url": "/rotas/rota01",
+      "image": "/videos/rotas/rota-01-01.jpg"
+    }
+  ]
+}

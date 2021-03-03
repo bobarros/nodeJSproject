@@ -1,0 +1,166 @@
+@font-face {
+        font-display: swap;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Lato Light'), local('Lato-Light'), url('/fonts/Lato-Light.ttf') format('truetype');
+      }
+
+      
+      @font-face {
+        font-display: swap;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Lato Regular'), local('Lato-Regular'), url('/fonts/Lato-Regular.ttf') format('truetype');
+      }
+     
+      @font-face {
+        font-display: swap;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Lato Bold'), local('Lato-Bold'), url('/fonts/Lato-Bold.ttf') format('truetype');
+      }      
+   
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Roboto Light'), local('Roboto-Light'), url('/fonts/Roboto-Light.ttf') format('truetype');
+      }
+      
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'), url('/fonts/Roboto-Regular.ttf') format('truetype');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Roboto Medium'), local('Roboto-Medium'), url('/fonts/Roboto-Medium.ttf') format('truetype');
+      }
+      @font-face {
+        font-display: swap;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Roboto Medium'), local('Roboto-Bold'), url('/fonts/Roboto-Bold.ttf') format('truetype');
+      }
+   
+// Cores
+$color-primary:#1E5110;
+$color-primary-light-1: lighten($color-primary, 10% );
+$color-primary-light-2: lighten($color-primary, 20% );
+$color-primary-light-3: lighten($color-primary, 30% );
+$color-primary-dark-1: darken($color-primary, 10% );
+$color-primary-dark-2: darken($color-primary, 20% );
+$color-primary-dark-3: darken($color-primary, 30% );
+
+$color-secondary:#295293;
+$color-secondary-light-1: lighten($color-secondary, 10% );
+$color-secondary-light-2: lighten($color-secondary, 20% );
+$color-secondary-light-3: lighten($color-secondary, 33% );
+$color-secondary-dark-1: darken($color-secondary, 10% );
+$color-secondary-dark-2: darken($color-secondary, 20% );
+$color-secondary-dark-3: darken($color-secondary, 30% );
+
+$color-terca:#441F00; 
+$color-terca-light-1: lighten($color-terca, 10% );
+$color-terca-light-2: lighten($color-terca, 20% );
+$color-terca-light-3: lighten($color-terca, 33% );
+$color-terca-dark-1: darken($color-terca, 10% );
+$color-terca-dark-2: darken($color-terca, 20% );
+$color-terca-dark-3: darken($color-terca, 30% );
+
+$color-quarta:#251605;
+$color-quarta-light-1: lighten($color-quarta, 10% );
+$color-quarta-light-2: lighten($color-quarta, 20% );
+$color-quarta-light-3: lighten($color-quarta, 33% );
+$color-quarta-dark-1: darken($color-quarta, 10% );
+$color-quarta-dark-2: darken($color-quarta, 20% );
+$color-quarta-dark-3: darken($color-quarta, 30% );
+
+
+$color-grey: #ebebeb;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+$titulos: #111;
+$textos: #111;
+$textoBotao: #fff;
+$textoSubCategorias: #bbb;
+$fundoPrimario: #fff;
+$fundoSecundario: #f5f5f580;
+
+// Fontes
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+
+$bp-largest: 75em; //1200px
+$bp-extra-large: 65em; //1040px
+$bp-large: 57.1875em; //915px
+$bp-medium: 46.875em; //750px
+$bp-small: 34.375em; //500px
+$bp-extra-small: 28em; //448px
+$bp-smallest: 22em; //350px
+
+// Sombras
+$sombra-padrao: .5rem .5rem .5rem .2rem rgba(#000, 0.3);
+$sombra-footer: .4rem -.3rem .5rem 0 rgba(#000, 0.15);
+
+* {
+        margin: 0;
+        padding: 0;
+}
+
+*,
+*::before,
+*::after {        
+        box-sizing: inherit;
+}
+
+html {
+        box-sizing: border-box;
+        font-size: 67.5%;
+        scroll-behavior: smooth;
+
+        @media only screen and (max-width: $bp-small) {
+                font-size: 55%;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+                font-size: 48%;
+        }
+
+}
+
+body {
+        
+        font-family: $font-primary;
+        font-weight: 300;
+        line-height: 1.6;
+        background-color: $color-white;
+        
+}
+
+html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+
+
+
+
+        
+      

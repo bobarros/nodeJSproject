@@ -1,0 +1,4 @@
+manifest.yml
+.cfignore
+node_modules/
+.env

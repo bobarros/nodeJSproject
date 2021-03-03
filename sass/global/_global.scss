@@ -1,0 +1,46 @@
+.container-principal {
+        
+        max-width: 1440px;
+        margin: 0 auto;
+        display: block;
+
+}
+
+.no-smallest {
+        
+        @media only screen and (max-width: $bp-smallest) {
+                display: none !important; 
+        }
+}
+
+.no-extra-small {
+        
+        @media only screen and (max-width: $bp-extra-small) {
+                display: none !important;
+        }
+}
+
+.no-small {
+        
+        @media only screen and (max-width: $bp-small) {
+                display: none !important;
+        }
+}
+
+
+.no-medium {
+        
+        @media only screen and (max-width: $bp-medium) {
+                display: none !important;
+        }
+}
+
+.ancora {
+        display: block;
+        position: relative;
+        top: -12rem;
+
+        @media only screen and (max-width: $bp-medium) {
+               
+        }
+}

@@ -1,0 +1,129 @@
+.testemunhos {
+
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+
+  &__titulo {
+
+    width: 100%;
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    color: $color-terca;
+    text-align: center;
+    font-family: $font-primary;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+      margin: 0 auto;
+      line-height: 4rem;
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+  }  
+
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 2rem 1rem 0 1rem;
+    }
+  }
+
+  &__card {
+
+    margin: .75rem;
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: .25rem; 
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin: .5rem .25rem;
+    }
+
+    &--img {
+      height: 26rem;
+      width: 20rem;
+      object-fit: cover;
+      border-radius: 1rem;
+    }    
+
+    &--dados {
+      background-color: #ffffff;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 1rem 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+      background-color: transparent;
+      top: 0;
+    }
+
+    &--nome {
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    &--local {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: $color-terca;
+      font-style: italic;
+    }  
+    
+    &--stars {
+      font-weight: 700;
+      color: #ffd800;
+      -webkit-text-stroke: .5px #e7970c;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+
+    }    
+
+    &--texto {
+      font-size: 1.35rem;
+      font-style: italic;
+    }
+
+    &--box-informacoes {
+      height: 26rem;
+      width: 22rem;
+      padding: 2rem;
+      position: relative;
+    }
+
+  }
+
+} 
+
+.btn-vermais {
+    color: $color-terca;
+    background-color: transparent;
+    border-bottom: 1px solid $color-terca;
+    width: 12rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 3px;
+    margin: 0 auto;
+}
+
+.btn-vermais:visited,
+.btn-vermais:link,
+.btn-vermais {
+    justify-self: center;
+    text-decoration: none;
+}
+
+.btn-vermais:hover {
+  background-color: $color-terca;
+  color: #fff;
+}
